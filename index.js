@@ -4,6 +4,7 @@ const app = express();
 const peopleRoutes = require("./routes/peopleRoutes");
 const carsRoutes = require("./routes/carsRoutes")
 
+app.use(express.urlencoded({extended: false}))
 
 app.use("/people", peopleRoutes);
 
